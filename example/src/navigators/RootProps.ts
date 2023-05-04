@@ -6,4 +6,5 @@ export type RootStackParamList = {
   Entry: EntryProps;
   Benchmarks: BenchmarksProps;
   TestingScreen: TestingScreenProps;
+  VexlTests: undefined;
 };

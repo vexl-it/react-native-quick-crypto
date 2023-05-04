@@ -2,6 +2,7 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import type { RootStackParamList } from './RootProps';
+import VexlTests from '../components/VexlTests';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -32,6 +33,7 @@ export const Root: React.FC = () => {
             return TestingScreen;
           }}
         />
+        <Stack.Screen name={'VexlTests'} component={VexlTests} />
       </Stack.Navigator>
     </NavigationContainer>
   );

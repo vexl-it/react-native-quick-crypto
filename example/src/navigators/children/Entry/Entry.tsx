@@ -72,6 +72,12 @@ export const Entry: React.FC<EntryProps> = ({}: EntryProps) => {
         </ScrollView>
       </View>
       <View style={styles.menu}>
+        <Button
+          title="Vexl tests"
+          onPress={() => {
+            navigation.navigate('VexlTests');
+          }}
+        />
         <Button title="checkAll" onPress={checkAll} />
         <Button title="clearAll" onPress={clearAll} />
         <Button

@@ -10,8 +10,9 @@ module.exports = {
         extensions: ['.js', '.ts', '.json', '.jsx', '.tsx'],
         alias: {
           [pak.name]: path.join(__dirname, '..', pak.source),
-          crypto: 'crypto-browserify',
-          stream: 'stream-browserify',
+          'node:crypto': path.join(__dirname, '..', pak.source),
+          'crypto': 'crypto-browserify',
+          'stream': 'stream-browserify',
         },
       },
     ],
