@@ -21,6 +21,7 @@
 #include "Sig/MGLSignInstaller.h"
 #include "Sig/MGLVerifyInstaller.h"
 #include "fastpbkdf2/MGLPbkdf2HostObject.h"
+#include "ECDH/MGLCreateECDHInstaller.h"
 #else
 #include "MGLCreateCipherInstaller.h"
 #include "MGLCreateDecipherInstaller.h"
@@ -34,6 +35,7 @@
 #include "MGLRandomHostObject.h"
 #include "MGLSignInstaller.h"
 #include "MGLVerifyInstaller.h"
+#include "MGLCreateECDHInstaller.h"
 #endif
 
 namespace margelo {
@@ -110,6 +112,11 @@ MGLQuickCryptoHostObject::MGLQuickCryptoHostObject(
 
   // createVerify
   this->fields.push_back(getVerifyFieldDefinition(jsCallInvoker, workerQueue));
+
+   // createECDH
+    this->fields.push_back(
+        getCreateECDHFieldDefinition(jsCallInvoker, workerQueue));
+
 }
 
 }  // namespace margelo

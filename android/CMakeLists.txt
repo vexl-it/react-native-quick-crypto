@@ -50,6 +50,7 @@ add_library(
         "../cpp/Sig/MGLSignInstaller.cpp"
         "../cpp/Sig/MGLVerifyInstaller.cpp"
         "../cpp/Sig/MGLSignHostObjects.cpp"
+        "../cpp/ECDH/MGLCreateECDHInstaller.cpp"
 )
 
 set_target_properties(
